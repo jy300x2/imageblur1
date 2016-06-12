@@ -1,16 +1,15 @@
 class Image
-  attr_writer :arr
+  attr_accessor :pixels
 
-  def initialize(arr)
-    self.arr = arr
+  def initialize(pixels)
+    self.pixels = pixels
   end
 
   def output_image
-    @arr.each do |row|
+    self.pixels.each do |row|
       puts row.join(' ')
     end
   end
-
 end
 
 image = Image.new([
